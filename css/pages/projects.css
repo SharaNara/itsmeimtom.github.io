@@ -1,0 +1,79 @@
+ul#projects {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+li.project {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 100%;
+    flex: 46%;
+    margin: 2%;
+    padding: 0;
+    border-radius: 4px;
+    pointer-events: none;
+    /* transition: background-color 0.2s; */
+}
+
+li.project a {
+    pointer-events: auto;
+}
+
+/* li.project:hover {
+    background-color: #222;
+} */
+
+li.project:hover img {
+    transform: translateY(-16px) scale(1.05);
+}
+
+li.project img {
+    width: 100%;
+    margin-bottom: -32px;
+    border-radius: 8px;
+    mask-image: linear-gradient(to bottom, #000 0%, transparent 100%);
+    -webkit-mask-image: linear-gradient(to bottom, #000 0%, transparent 100%);
+    transform: translateY(0) scale(1.05);
+    transition: all 0.2s ease-out;
+    z-index: 0;
+}
+
+li a.project-title, li.project span.project-langs, li.project p {
+    z-index: 2;;
+}
+
+li a.project-title {
+    font-size: 2em;
+    color: inherit;
+    transition: color 0.2s;
+}
+
+li a.project-title:hover {
+    color: skyblue;
+}
+
+li.project span.project-langs {
+    opacity: 0.8;
+    margin-bottom: 4px;
+}
+
+li.project span.project-langs span.lang {
+    display: inline-block;
+    margin: 0 2px;
+}
+
+@media screen and (max-width: 70em) {
+    li.project {
+      flex: 100%;
+      margin: 24px 0;
+    }
+
+    li.project img {
+        margin-bottom: 8px;
+    }
+  }
+  
